@@ -12,17 +12,14 @@ Handles facial recognition, voice processing, user registration, and LLM interac
 ### Client (PiCar-X): 
 Streams video, executes movement/camera commands, and speaks responses via TTS.
 
-
 ---
 
-## Server Structure (`server/`)
+### Server Structure (`server/`)
 * `server.py`: Flask-SocketIO server that receives video frames, detects users, and interacts with the LLM.
 * `face_recognition_model.py`: Contains `FaceRecognizer` class for face matching, registration, and storing/retrieving user conversations.
 * `init_face_db.py`: Initializes the SQLite database with `users` and `conversations` tables.
 
---- 
-
-## Client Structure (`client/` on Raspberry Pi)
+### Client Structure (`client/` on Raspberry Pi)
 * `client.py`: Starts video streaming, connects to the server, executes incoming commands, and handles TTS responses.
 * `face_tracking.py`: Tracks and centers the user’s face using OpenCV and camera servos.
 * `robot_commands.py`: Contains motor, servo, and utility command implementations
@@ -74,14 +71,14 @@ Install PiCar-X dependencies (see SunFounder docs).
 
 ## Supported Voice Commands
 
-* move forward
-* move backward
-* turn left / turn right
-* stop
-* track my face / stop tracking
-* center camera
-* take a picture
-* honk / play music
+* Move forward
+* Move backward
+* Turn left / turn right
+* Stop
+* Track my face / stop tracking
+* Center camera
+* Take a picture
+* Honk / play music
 
 ---
 
